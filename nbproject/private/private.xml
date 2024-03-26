@@ -2,6 +2,18 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/D:/Duan1/QUAN%20LY%20MLB/MLB_STORE/ui-dashboard-001/src/view/View_SanPham.java</file>
+            <file>file:/D:/Duan1/QUAN%20LY%20MLB/MLB_STORE/ui-dashboard-001/src/service/SanPham_Service.java</file>
+            <file>file:/D:/Duan1/QUAN%20LY%20MLB/MLB_STORE/ui-dashboard-001/src/view/Main_QuanLy.java</file>
+            <file>file:/D:/Duan1/QUAN%20LY%20MLB/MLB_STORE/ui-dashboard-001/src/model/SanPham.java</file>
+            <file>file:/D:/Duan1/QUAN%20LY%20MLB/MLB_STORE/ui-dashboard-001/src/view/Form_NhanVien.java</file>
+            <file>file:/D:/Duan1/QUAN%20LY%20MLB/MLB_STORE/ui-dashboard-001/src/view/Form_SanPham.java</file>
+            <file>file:/D:/Duan1/QUAN%20LY%20MLB/MLB_STORE/ui-dashboard-001/src/model/DanhMuc.java</file>
+            <file>file:/D:/Duan1/QUAN%20LY%20MLB/MLB_STORE/ui-dashboard-001/src/service/DBConnect.java</file>
+            <file>file:/D:/Duan1/QUAN%20LY%20MLB/MLB_STORE/ui-dashboard-001/src/model/ChatLieu.java</file>
+            <file>file:/D:/Duan1/QUAN%20LY%20MLB/MLB_STORE/ui-dashboard-001/src/model/KhachHang.java</file>
+            <file>file:/D:/Duan1/QUAN%20LY%20MLB/MLB_STORE/ui-dashboard-001/src/model/KichCo.java</file>
+        </group>
     </open-files>
 </project-private>

@@ -9,7 +9,7 @@ import java.util.List;
 import model.NhanVien;
 
 /**
- * @author HP
+ * @author 
  */
 public interface InterfaceNhanVien {
     abstract public void insert(NhanVien Entity);

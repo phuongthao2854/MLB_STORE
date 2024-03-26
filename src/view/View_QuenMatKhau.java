@@ -11,12 +11,12 @@ import service.Login_Service;
  *
  * @author Admin
  */
-public class View_Login extends javax.swing.JFrame {
+public class View_QuenMatKhau extends javax.swing.JFrame {
      Login_Service data = new Login_Service();
     /**
      * Creates new form View_Login
      */
-    public View_Login() {
+    public View_QuenMatKhau() {
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -34,8 +34,8 @@ public class View_Login extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        txt_Ten = new javax.swing.JTextField();
-        txt_Password = new javax.swing.JPasswordField();
+        txt_TaiKhoan = new javax.swing.JTextField();
+        txt_Pass = new javax.swing.JPasswordField();
         btn_Login = new javax.swing.JButton();
         btn_Thoat = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
@@ -53,20 +53,20 @@ public class View_Login extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 153));
         jLabel1.setText("ĐĂNG NHẬP ");
 
-        txt_Ten.setBackground(new java.awt.Color(237, 236, 236));
-        txt_Ten.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        txt_Ten.addActionListener(new java.awt.event.ActionListener() {
+        txt_TaiKhoan.setBackground(new java.awt.Color(237, 236, 236));
+        txt_TaiKhoan.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        txt_TaiKhoan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_TenActionPerformed(evt);
+                txt_TaiKhoanActionPerformed(evt);
             }
         });
 
-        txt_Password.setBackground(new java.awt.Color(237, 236, 236));
-        txt_Password.setText("*****************");
-        txt_Password.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
-        txt_Password.addActionListener(new java.awt.event.ActionListener() {
+        txt_Pass.setBackground(new java.awt.Color(237, 236, 236));
+        txt_Pass.setText("*****************");
+        txt_Pass.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        txt_Pass.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_PasswordActionPerformed(evt);
+                txt_PassActionPerformed(evt);
             }
         });
 
@@ -114,8 +114,8 @@ public class View_Login extends javax.swing.JFrame {
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txt_Ten)
-                            .addComponent(txt_Password)
+                            .addComponent(txt_TaiKhoan)
+                            .addComponent(txt_Pass)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(btn_Login)
@@ -134,10 +134,10 @@ public class View_Login extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txt_Ten, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txt_TaiKhoan, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel2))
                         .addGap(60, 60, 60)
-                        .addComponent(txt_Password, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(txt_Pass, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(48, 48, 48)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -165,9 +165,9 @@ public class View_Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txt_TenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_TenActionPerformed
+    private void txt_TaiKhoanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_TaiKhoanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_TenActionPerformed
+    }//GEN-LAST:event_txt_TaiKhoanActionPerformed
 
     private void btn_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LoginActionPerformed
         // TODO add your handling code here:
@@ -178,9 +178,9 @@ public class View_Login extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btn_ThoatActionPerformed
 
-    private void txt_PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_PasswordActionPerformed
+    private void txt_PassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_PassActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txt_PasswordActionPerformed
+    }//GEN-LAST:event_txt_PassActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,14 +199,30 @@ public class View_Login extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(View_Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(View_QuenMatKhau.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(View_Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(View_QuenMatKhau.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(View_Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(View_QuenMatKhau.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(View_Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(View_QuenMatKhau.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
         //</editor-fold>
@@ -227,7 +243,7 @@ public class View_Login extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new View_Login().setVisible(true);
+                new View_QuenMatKhau().setVisible(true);
             }
         });
     }
@@ -241,7 +257,7 @@ public class View_Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField txt_Password;
-    private javax.swing.JTextField txt_Ten;
+    private javax.swing.JPasswordField txt_Pass;
+    private javax.swing.JTextField txt_TaiKhoan;
     // End of variables declaration//GEN-END:variables
 }

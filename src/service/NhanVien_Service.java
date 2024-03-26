@@ -67,7 +67,7 @@ public class NhanVien_Service {
         return kq;
     }
 
-    public boolean isMaSanPham(String ma) {
+    public boolean isMaNhanVien(String ma) {
         con = DBConnect.getConnection();
         sql = " select count(*) from NhanVien where MaNhanVien like ?";
         try {
@@ -108,5 +108,138 @@ public class NhanVien_Service {
         }
         return kq;
     }
+    public List<NhanVien> TimKiem(String ma) {
+        listNV = new ArrayList<>();
+        sql = "SELECT MaNhanVien, TenNhanVien, VaiTro, TaiKhoan, MatKhau, GioiTinh, NgaySinh, SDT, Email, DiaChi, TrangThai FROM NhanVien WHERE MaNhanVien like ?";
+        try {
+            con = DBConnect.getConnection();
+            ps = con.prepareStatement(sql);
+            ps.setString(1, ma);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                 NhanVien nv = new NhanVien(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4),
+                        rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9),
+                        rs.getString(10), rs.getString(11)
+                );
+                listNV.add(nv);
+            }
+            return listNV;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+    public List<NhanVien> locGT(String gioitinh) {
+        listNV = new ArrayList<>();
+        con = DBConnect.getConnection();
+        sql = "select MaNhanVien, TenNhanVien, VaiTro, TaiKhoan, MatKhau, GioiTinh, NgaySinh, SDT, Email, DiaChi, TrangThai from NhanVien where GioiTinh like ?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, gioitinh);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+
+                NhanVien nv = new NhanVien(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4),
+                        rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9),
+                        rs.getString(10), rs.getString(11)
+                );
+                listNV.add(nv);  
+            }// đóng while 
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                con.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return listNV;
+    }
+    public List<NhanVien> locVT(String vaitro) {
+        listNV = new ArrayList<>();
+        con = DBConnect.getConnection();
+        sql = "select MaNhanVien, TenNhanVien, VaiTro, TaiKhoan, MatKhau, GioiTinh, NgaySinh, SDT, Email, DiaChi, TrangThai from NhanVien where VaiTro like ?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, vaitro);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+
+                NhanVien nv = new NhanVien(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4),
+                        rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9),
+                        rs.getString(10), rs.getString(11)
+                );
+                listNV.add(nv);  
+            }// đóng while 
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                con.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return listNV;
+    }
+     public List<NhanVien> locTT(String trangthai) {
+        listNV = new ArrayList<>();
+        con = DBConnect.getConnection();
+        sql = "select MaNhanVien, TenNhanVien, VaiTro, TaiKhoan, MatKhau, GioiTinh, NgaySinh, SDT, Email, DiaChi, TrangThai from NhanVien where TrangThai like ?";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, trangthai);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+
+                NhanVien nv = new NhanVien(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4),
+                        rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9),
+                        rs.getString(10), rs.getString(11)
+                );
+                listNV.add(nv);  
+            }// đóng while 
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                con.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return listNV;
+    }
     
+     public List<NhanVien> searchTenNV(String ten) {
+        listNV = new ArrayList<>();
+        con = DBConnect.getConnection();
+        sql = "select MaNhanVien, TenNhanVien, VaiTro, TaiKhoan, MatKhau, GioiTinh, NgaySinh, SDT, Email, DiaChi, TrangThai from NhanVien where TenNhanVien like ? ";
+        try {
+            ps = con.prepareStatement(sql);
+            ps.setString(1, "%" + ten + "%");
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                // public HangHoa(long id, String ma, String ten, double donGia, int soLuong, String donVT, int xuatXu) {
+                 NhanVien nv = new NhanVien(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4),
+                        rs.getString(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9),
+                        rs.getString(10), rs.getString(11)
+                );
+                listNV.add(nv);  
+            }// đóng while 
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                con.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        return listNV;
+    }
 }

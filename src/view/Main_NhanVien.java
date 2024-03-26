@@ -7,13 +7,6 @@ package view;
 
 
 import com.raven.event.EventMenuSelected;
-import view.Form_BanHang;
-import view.Form_HoaDon;
-import view.Form_KhachHang;
-import view.Form_NhanVien;
-import view.Form_SanPham;
-import view.Form_ThongKe;
-import view.Form_Voucher;
 import java.awt.Color;
 import javax.swing.JComponent;
 import javax.swing.JOptionPane;
@@ -23,59 +16,43 @@ import view.View_Login;
  *
  * @author RAVEN
  */
-public class Main extends javax.swing.JFrame {
+public class Main_NhanVien extends javax.swing.JFrame {
 
     /**
      * Creates new form Main
      */
-    private Form_BanHang form1;
-    private Form_NhanVien form3;
-    private Form_SanPham form2;
-    private Form_KhachHang form4;
-    private Form_HoaDon form5;
-    private Form_Voucher form6;
-    private Form_ThongKe form7;
+    private Form_BanHang form1;  
+    private Form_KhachHang form2;
+    private Form_HoaDon form3;
 
-    public Main() {
+    public Main_NhanVien() {
         initComponents();
         setLocationRelativeTo(null);
         setBackground(new Color(0, 0, 0, 0));
 
         form1 = new Form_BanHang();
-        form3 = new Form_NhanVien();
-        form2 = new Form_SanPham();
-        form4 = new Form_KhachHang();
-        form5 = new Form_HoaDon();
-        form6 = new Form_Voucher();
-        form7 = new Form_ThongKe();
+        form2 = new Form_KhachHang();
+        form3 = new Form_HoaDon();
 
-        menu.initMoving(Main.this);
+        menu.initMoving(Main_NhanVien.this);
         menu.addEventMenuSelected(new EventMenuSelected() {
             @Override
             public void selected(int index) {
                 if (index == 0) {
                     setForm(form1);
-                } else if (index == 1) {
+                }  else if (index == 1) {
                     setForm(form2);
                 } else if (index == 2) {
                     setForm(form3);
-                } else if (index == 3) {
-                    setForm(form4);
-                } else if (index == 4) {
-                    setForm(form5);
-                } else if (index == 5) {
-                    setForm(form6);
-                } else if (index == 6) {
-                    setForm(form7);
-                } else if (index == 7) {
+                }  else if (index == 3) {
                     int lc = JOptionPane.showConfirmDialog(null, "Bạn có muốn đăng xuất không ?", "Thông báo", JOptionPane.YES_NO_OPTION);
                     if (lc != JOptionPane.YES_OPTION) {
                         return;
                     }
                     View_Login v = new View_Login();
-                    Main.this.dispose(); // ngắt mh
+                    Main_NhanVien.this.dispose(); // ngắt mh
                     v.setVisible(true);
-                } else if (index == 8) {
+                } else if (index == 4) {
                     System.exit(0);
                 }
             }
@@ -170,21 +147,35 @@ public class Main extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main_NhanVien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main_NhanVien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main_NhanVien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Main.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Main_NhanVien.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Main().setVisible(true);
+                new Main_NhanVien().setVisible(true);
             }
         });
     }

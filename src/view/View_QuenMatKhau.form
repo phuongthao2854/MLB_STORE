@@ -67,8 +67,8 @@
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="txt_Ten" alignment="0" max="32767" attributes="0"/>
-                              <Component id="txt_Password" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txt_TaiKhoan" alignment="0" max="32767" attributes="0"/>
+                              <Component id="txt_Pass" alignment="0" max="32767" attributes="0"/>
                               <Group type="102" alignment="1" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="btn_Login" min="-2" max="-2" attributes="0"/>
@@ -95,11 +95,11 @@
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="txt_Ten" min="-2" pref="26" max="-2" attributes="0"/>
+                              <Component id="txt_TaiKhoan" min="-2" pref="26" max="-2" attributes="0"/>
                               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                          <Component id="txt_Password" min="-2" pref="26" max="-2" attributes="0"/>
+                          <Component id="txt_Pass" min="-2" pref="26" max="-2" attributes="0"/>
                       </Group>
                       <Component id="jLabel3" min="-2" pref="26" max="-2" attributes="0"/>
                   </Group>
@@ -136,7 +136,7 @@
             <Property name="text" type="java.lang.String" value="&#x110;&#x102;NG NH&#x1eac;P "/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txt_Ten">
+        <Component class="javax.swing.JTextField" name="txt_TaiKhoan">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ec" green="ec" red="ed" type="rgb"/>
@@ -148,10 +148,10 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_TenActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_TaiKhoanActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JPasswordField" name="txt_Password">
+        <Component class="javax.swing.JPasswordField" name="txt_Pass">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ec" green="ec" red="ed" type="rgb"/>
@@ -164,7 +164,7 @@
             </Property>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_PasswordActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_PassActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btn_Login">
